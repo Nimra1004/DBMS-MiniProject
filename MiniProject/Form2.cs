@@ -145,6 +145,17 @@ namespace MiniProject
                         Cancel_Click(sender, e);
                     }
                     conn.Close();
+                    if (MessageBox.Show("Do you Want to Add Another Student's Data?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        this.Show();
+                    }
+                    else
+                    {
+                        this.Close();
+                        Dashboard t = new Dashboard();
+                        t.Show();
+                    }
+                    
                 }
             }
             catch (Exception ex)
@@ -185,6 +196,11 @@ namespace MiniProject
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -15,6 +15,7 @@ namespace MiniProject
     {
         SqlConnection conn = DatabaseConnection.getInstance().getConnection();
         SqlDataReader dr;
+        Form1 h = new Form1();
         public ManageAdviser()
         {
             InitializeComponent();
@@ -32,25 +33,35 @@ namespace MiniProject
                     dataGridView1.Rows[n].Cells[3].Value = dr.GetValue(3);
                     dataGridView1.Rows[n].Cells[4].Value = dr.GetValue(4);
                     dataGridView1.Rows[n].Cells[5].Value = dr.GetValue(5);
-                    dataGridView1.Rows[n].Cells[6].Value = dr.GetValue(6);
-                    
-                    if ((int)dr.GetValue(7) == 6)
+                    //dataGridView1.Rows[n].Cells[6].Value = dr.GetValue(6);
+
+                    if (Convert.ToInt16(dr.GetValue(6)) == 1)
+                    {
+                        dataGridView1.Rows[n].Cells[6].Value = "Male";
+                    }
+                    else
+                    {
+                        dataGridView1.Rows[n].Cells[6].Value = "Female";
+                    }
+                   // dataGridView1.Rows[n].Cells[7].Value = dr.GetString(7);
+
+                    if (Convert.ToInt16(dr.GetValue(7)) == 6)
                     {
                         dataGridView1.Rows[n].Cells[8].Value = "Professor";
                     }
-                    if ((int)dr.GetValue(7) == 7)
+                    if (Convert.ToInt16(dr.GetValue(7)) == 7)
                     {
                         dataGridView1.Rows[n].Cells[8].Value = "Associate Professor";
                     }
-                    if ((int)dr.GetValue(7) == 8)
+                    if (Convert.ToInt16(dr.GetValue(7)) == 8)
                     {
                         dataGridView1.Rows[n].Cells[8].Value = "Assisstant Professor";
                     }
-                    if ((int)dr.GetValue(7) == 9)
+                    if (Convert.ToInt16(dr.GetValue(7)) == 9)
                     {
                         dataGridView1.Rows[n].Cells[8].Value = "Lecturer";
                     }
-                    if ((int)dr.GetValue(7) == 10)
+                    if (Convert.ToInt16(dr.GetValue(7)) == 10)
                     {
                         dataGridView1.Rows[n].Cells[8].Value = "Industry Professional";
                     }
@@ -106,60 +117,65 @@ namespace MiniProject
             conn.Close();
             if (dataGridView1.Columns[e.ColumnIndex].Name == "Edit" && (e.RowIndex >= 0))
             {
-                Edit_Panel.Show();
-                conn.Open();
-                int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
-                SqlCommand cm = new SqlCommand("Select P.Id, P.FirstName, P.LastName, P.Contact, P.Email, P.DateofBirth, P.Gender, S.Designation, S.Salary from Person P Inner join Advisor S on P.Id = S.Id  where P.Id=@Id ", conn);
-                cm.Parameters.Add(new SqlParameter("@Id", id));
-                dr = cm.ExecuteReader();
-                try
+                if (MessageBox.Show("Are You Sure You Want to Update this?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    while (dr.Read())
+
+                    Edit_Panel.Show();
+                    conn.Open();
+                    int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
+                    SqlCommand cm = new SqlCommand("Select P.Id, P.FirstName, P.LastName, P.Contact, P.Email, P.DateofBirth, P.Gender, S.Designation, S.Salary from Person P Inner join Advisor S on P.Id = S.Id  where P.Id=@Id ", conn);
+                    cm.Parameters.Add(new SqlParameter("@Id", id));
+                    dr = cm.ExecuteReader();
+                    try
                     {
-                        FirstName.Text = dr.GetString(1);
-                        Last_Name.Text = dr.GetString(2);
-                        ContactTextBox.Text = dr.GetString(3);
-                        EmailTxtBox.Text = dr.GetString(4);
-                        dateTimePicker1.Value = (DateTime)dr.GetValue(5);
-                        if ((int)dr.GetValue(6) == 1)
+                        while (dr.Read())
                         {
-                            radioButton1.Checked = true;
+                            FirstName.Text = dr.GetString(1);
+                            Last_Name.Text = dr.GetString(2);
+                            ContactTextBox.Text = dr.GetString(3);
+                            EmailTxtBox.Text = dr.GetString(4);
+                            dateTimePicker1.Value = (DateTime)dr.GetValue(5);
+                            if ((int)dr.GetValue(6) == 1)
+                            {
+                                radioButton1.Checked = true;
+                            }
+                            else
+                            {
+                                radioButton2.Checked = true;
+                            }
+                            registrationtxt.Text = Convert.ToString(dr.GetValue(8));
+                            if ((int)dr.GetValue(7) == 6)
+                            {
+                                advisercombo.Text = "Professor";
+                            }
+                            if ((int)dr.GetValue(7) == 7)
+                            {
+                                advisercombo.Text = "Associate Professor";
+                            }
+                            if ((int)dr.GetValue(7) == 8)
+                            {
+                                advisercombo.Text = "Assisstant Professor";
+                            }
+                            if ((int)dr.GetValue(7) == 9)
+                            {
+                                advisercombo.Text = "Lecturer";
+                            }
+                            if ((int)dr.GetValue(7) == 10)
+                            {
+                                advisercombo.Text = "Industry Professional";
+                            }
+                            //advisercombo.Text = Convert.ToString(dr.GetValue(7));
+                            textBox1.Text = Convert.ToString(dr.GetValue(0));
+
                         }
-                        else
-                        {
-                            radioButton2.Checked = true;
-                        }
-                        registrationtxt.Text = Convert.ToString(dr.GetValue(8));
-                        if ((int)dr.GetValue(7) == 6)
-                        {
-                            advisercombo.Text = "Professor";
-                        }
-                        if ((int)dr.GetValue(7) == 7)
-                        {
-                            advisercombo.Text = "Associate Professor";
-                        }
-                        if ((int)dr.GetValue(7) == 8)
-                        {
-                            advisercombo.Text = "Assisstant Professor";
-                        }
-                        if ((int)dr.GetValue(7) == 9)
-                        {
-                            advisercombo.Text = "Lecturer";
-                        }
-                        if ((int)dr.GetValue(7) == 10)
-                        {
-                            advisercombo.Text = "Industry Professional";
-                        }
-                        //advisercombo.Text = Convert.ToString(dr.GetValue(7));
-                        textBox1.Text = Convert.ToString(dr.GetValue(0));
+                        dr.Close();
+                        conn.Close();
 
                     }
-                    dr.Close();
-                    conn.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
 
 
@@ -296,6 +312,7 @@ namespace MiniProject
                     {
                         MessageBox.Show("Data Updated Succesfully");
                         Edit_Panel.Hide();
+                        this.Close();
                         ManageAdviser r = new ManageAdviser();
                         r.Show();
                     }
@@ -325,6 +342,25 @@ namespace MiniProject
         private void button2_Click(object sender, EventArgs e)
         {
             Edit_Panel.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+            
+            this.Hide();
+        }
+
+        private void gg_Click(object sender, EventArgs e)
+        {
+            Form3 n = new Form3();
+            this.Close();
+            n.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

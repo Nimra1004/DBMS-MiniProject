@@ -52,6 +52,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -63,10 +64,10 @@
             this.Cancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Cancel.AutoSize = true;
             this.Cancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Cancel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Cancel.BackColor = System.Drawing.Color.CadetBlue;
             this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cancel.Location = new System.Drawing.Point(569, 420);
+            this.Cancel.Location = new System.Drawing.Point(573, 420);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(71, 26);
             this.Cancel.TabIndex = 7;
@@ -90,6 +91,7 @@
             // 
             // FirstName
             // 
+            this.FirstName.BackColor = System.Drawing.SystemColors.Window;
             this.FirstName.Dock = System.Windows.Forms.DockStyle.Top;
             this.FirstName.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstName.Location = new System.Drawing.Point(169, 3);
@@ -99,6 +101,7 @@
             // 
             // LastName
             // 
+            this.LastName.BackColor = System.Drawing.SystemColors.Window;
             this.LastName.Dock = System.Windows.Forms.DockStyle.Top;
             this.LastName.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastName.Location = new System.Drawing.Point(169, 31);
@@ -108,6 +111,7 @@
             // 
             // Contact
             // 
+            this.Contact.BackColor = System.Drawing.SystemColors.Window;
             this.Contact.Dock = System.Windows.Forms.DockStyle.Top;
             this.Contact.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Contact.Location = new System.Drawing.Point(169, 59);
@@ -117,6 +121,7 @@
             // 
             // Email
             // 
+            this.Email.BackColor = System.Drawing.SystemColors.Window;
             this.Email.Dock = System.Windows.Forms.DockStyle.Top;
             this.Email.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Email.Location = new System.Drawing.Point(169, 87);
@@ -126,6 +131,7 @@
             // 
             // RegistrationNo
             // 
+            this.RegistrationNo.BackColor = System.Drawing.SystemColors.Window;
             this.RegistrationNo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RegistrationNo.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegistrationNo.Location = new System.Drawing.Point(169, 182);
@@ -138,7 +144,7 @@
             this.Submit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Submit.AutoSize = true;
             this.Submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Submit.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Submit.BackColor = System.Drawing.Color.CadetBlue;
             this.Submit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Submit.Location = new System.Drawing.Point(646, 420);
@@ -223,10 +229,11 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label8.Font = new System.Drawing.Font("Georgia", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.Window;
             this.label8.Location = new System.Drawing.Point(89, 147);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(169, 70);
@@ -253,7 +260,7 @@
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.Window;
             this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
@@ -315,7 +322,7 @@
             // 
             this.radioButton1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.radioButton1.BackColor = System.Drawing.SystemColors.Window;
             this.radioButton1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.Location = new System.Drawing.Point(88, 3);
             this.radioButton1.Name = "radioButton1";
@@ -328,6 +335,8 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(169, 115);
@@ -339,12 +348,12 @@
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button2.AutoSize = true;
-            this.button2.BackColor = System.Drawing.SystemColors.Window;
+            this.button2.BackColor = System.Drawing.Color.CadetBlue;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(717, 418);
+            this.button2.Location = new System.Drawing.Point(714, 420);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 28);
+            this.button2.Size = new System.Drawing.Size(75, 26);
             this.button2.TabIndex = 9;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = false;
@@ -352,7 +361,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.BackColor = System.Drawing.Color.CadetBlue;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -370,11 +379,25 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SandyBrown;
+            this.button1.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(723, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 62);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "EXIT\r\n";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Student_Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(863, 528);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Cancel);
@@ -420,5 +443,6 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

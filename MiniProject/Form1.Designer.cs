@@ -50,6 +50,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.mnage = new System.Windows.Forms.Button();
             this.Managebtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.ManagePanel.SuspendLayout();
@@ -148,7 +149,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(56, 210);
+            this.label3.Location = new System.Drawing.Point(57, 263);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 27);
             this.label3.TabIndex = 13;
@@ -176,7 +177,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Navy;
-            this.label4.Location = new System.Drawing.Point(57, 266);
+            this.label4.Location = new System.Drawing.Point(57, 215);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 27);
             this.label4.TabIndex = 15;
@@ -253,7 +254,7 @@
             this.advisorpicbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.advisorpicbox.BackColor = System.Drawing.Color.CornflowerBlue;
             this.advisorpicbox.Image = ((System.Drawing.Image)(resources.GetObject("advisorpicbox.Image")));
-            this.advisorpicbox.Location = new System.Drawing.Point(11, 254);
+            this.advisorpicbox.Location = new System.Drawing.Point(11, 203);
             this.advisorpicbox.Name = "advisorpicbox";
             this.advisorpicbox.Size = new System.Drawing.Size(42, 42);
             this.advisorpicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -266,7 +267,7 @@
             this.AddEvaluationIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.AddEvaluationIcon.BackColor = System.Drawing.Color.CornflowerBlue;
             this.AddEvaluationIcon.Image = ((System.Drawing.Image)(resources.GetObject("AddEvaluationIcon.Image")));
-            this.AddEvaluationIcon.Location = new System.Drawing.Point(11, 201);
+            this.AddEvaluationIcon.Location = new System.Drawing.Point(12, 254);
             this.AddEvaluationIcon.Name = "AddEvaluationIcon";
             this.AddEvaluationIcon.Size = new System.Drawing.Size(42, 43);
             this.AddEvaluationIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -300,7 +301,7 @@
             // 
             this.mnage.BackColor = System.Drawing.Color.SandyBrown;
             this.mnage.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnage.Location = new System.Drawing.Point(176, 222);
+            this.mnage.Location = new System.Drawing.Point(577, 22);
             this.mnage.Name = "mnage";
             this.mnage.Size = new System.Drawing.Size(128, 62);
             this.mnage.TabIndex = 1;
@@ -312,7 +313,7 @@
             // 
             this.Managebtn.BackColor = System.Drawing.Color.SandyBrown;
             this.Managebtn.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Managebtn.Location = new System.Drawing.Point(42, 222);
+            this.Managebtn.Location = new System.Drawing.Point(436, 22);
             this.Managebtn.Name = "Managebtn";
             this.Managebtn.Size = new System.Drawing.Size(128, 62);
             this.Managebtn.TabIndex = 21;
@@ -320,13 +321,25 @@
             this.Managebtn.UseVisualStyleBackColor = false;
             this.Managebtn.Click += new System.EventHandler(this.Managebtn_Click_1);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SandyBrown;
+            this.button1.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(724, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 62);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "EXIT\r\n";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MistyRose;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(896, 580);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Managebtn);
             this.Controls.Add(this.mnage);
             this.Controls.Add(this.pictureBox3);
@@ -374,6 +387,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button mnage;
         private System.Windows.Forms.Button Managebtn;
+        private System.Windows.Forms.Button button1;
     }
 }
 

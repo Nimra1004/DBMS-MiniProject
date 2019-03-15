@@ -31,8 +31,8 @@ namespace MiniProject
 
         private void Cancel_Click(object sender, EventArgs e)
         {
-            TitleTxt.Text = " ";
-            DescriptionTxt.Text = " ";
+            TitleTxt.Text = "";
+            DescriptionTxt.Text = "";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -55,11 +55,19 @@ namespace MiniProject
                     {
                         MessageBox.Show("Data Recorded Succesfully");
                         Cancel_Click(sender, e);
-                        this.Close();
-                        Form1 v = new Form1();
-                        v.Show();
+                        
                     }
                     conn.Close();
+                    if (MessageBox.Show("Do you Want to Add Another Student's Data?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        this.Show();
+                    }
+                    else
+                    {
+                        this.Close();
+                        ManageProject t = new ManageProject();
+                        t.Show();
+                    }
                 }
                 catch(Exception ex)
                 {
@@ -82,6 +90,11 @@ namespace MiniProject
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -14,10 +14,13 @@ namespace MiniProject
     public partial class ManageProject : Form
     {
         SqlConnection conn = DatabaseConnection.getInstance().getConnection();
-
+        
+        
+        
         public ManageProject()
         {
             InitializeComponent();
+            
             Edit_Panel.Hide();
             try
             {
@@ -31,18 +34,18 @@ namespace MiniProject
                     dataGridView1.Rows[n].Cells[1].Value = dr.GetString(1);
                     dataGridView1.Rows[n].Cells[2].Value = dr.GetString(2);
                 };
-                conn.Close();
+               
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            conn.Close();
         }
 
         private void Add_Project_Click(object sender, EventArgs e)
         {
-            Form3 s1 = new Form3();
-            s1.Show();
+            
         }
 
         private void ManageProject_Load(object sender, EventArgs e)
@@ -53,9 +56,10 @@ namespace MiniProject
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             conn.Open();
-            try
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "Delete" && (e.RowIndex >= 0))
             {
-                if (dataGridView1.Columns[e.ColumnIndex].Name == "Delete" && (e.RowIndex >= 0))
+
+                try
                 {
                     if (MessageBox.Show("Are You Sure You Want to Delete this?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
@@ -67,26 +71,26 @@ namespace MiniProject
                         if (rows != 0)
                         {
                             MessageBox.Show("Data deleted!");
-                            this.Hide();
+                            this.Close();
                             ManageProject D = new ManageProject();
                             D.Show();
                         }
                     }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                conn.Close();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            conn.Close();
 
-            if (dataGridView1.Columns[e.ColumnIndex].Name == "Edit" && (e.RowIndex >= 0))
+            else if (dataGridView1.Columns[e.ColumnIndex].Name == "Edit" && (e.RowIndex >= 0))
             {
-                if (MessageBox.Show("Are You Sure You Want to Delete this?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Are You Sure You Want to Update this?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
 
                     Edit_Panel.Show();
-                    conn.Open();
+                    //conn.Open();
                     int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
                     SqlCommand cm = new SqlCommand("Select P.Id, P.Title, P.Description from Project P  where P.Id=@Id ", conn);
                     cm.Parameters.Add(new SqlParameter("@Id", id));
@@ -101,20 +105,25 @@ namespace MiniProject
                             textBox1.Text = Convert.ToString(dr.GetValue(0));
                         }
                         dr.Close();
-                        conn.Close();
+
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message);
                     }
+                    conn.Close();
+                }
+                else
+                {
+                    MessageBox.Show("No DATA availiable");
                 }
             }
         }
 
         private void Cancel_Click(object sender, EventArgs e)
         {
-            TitleTxt.Text = " ";
-            DescriptionTxt.Text = " ";
+            TitleTxt.Text = "";
+            DescriptionTxt.Text = "";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -147,26 +156,60 @@ namespace MiniProject
                     if (rows2 != 0)
                     {
                         MessageBox.Show("Project Details Updated");
-                        conn.Close();
+                        
                         Edit_Panel.Hide();
-                        ManageProject o = new ManageProject();
+                        this.Close();
+                        //ManageProject o = new ManageProject();
+                        ManageProject D = new ManageProject();
+                        D.Show();
                     }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
+                conn.Close();
             }
             else
             {
                 MessageBox.Show("Invalid Data!." +
                  "Please Enter Valid Data");
+                conn.Close();
             }
         }
 
         private void Edit_Panel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gg_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form3 S = new Form3();
+            S.Show();
+            
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

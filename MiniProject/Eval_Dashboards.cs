@@ -43,8 +43,7 @@ namespace MiniProject
 
         private void AddEvaluationIcon_Click(object sender, EventArgs e)
         {
-            AddEvaluation p1 = new AddEvaluation();
-            p1.Show();
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -79,28 +78,32 @@ namespace MiniProject
 
             if (dataGridView1.Columns[e.ColumnIndex].Name == "Edit" && (e.RowIndex >= 0))
             {
-                Edit_Panel.Show();
-                conn.Open();
-                int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
-                SqlCommand cm = new SqlCommand("Select Id, Name, TotalMarks, TotalWeightage from Evaluation  where Id=@Id ", conn);
-                cm.Parameters.Add(new SqlParameter("@Id", id));
-                SqlDataReader dr;
-                dr = cm.ExecuteReader();
-                try
+                if (MessageBox.Show("Are You Sure You Want to Update this?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    while (dr.Read())
+
+                    Edit_Panel.Show();
+                    conn.Open();
+                    int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
+                    SqlCommand cm = new SqlCommand("Select Id, Name, TotalMarks, TotalWeightage from Evaluation  where Id=@Id ", conn);
+                    cm.Parameters.Add(new SqlParameter("@Id", id));
+                    SqlDataReader dr;
+                    dr = cm.ExecuteReader();
+                    try
                     {
-                        nametxt.Text = dr.GetString(1);
-                        markstxt.Text = Convert.ToString(dr.GetValue(2));
-                        Weightaetxt.Text = Convert.ToString(dr.GetValue(3));
-                        textBox1.Text = Convert.ToString(dr.GetValue(0));
+                        while (dr.Read())
+                        {
+                            nametxt.Text = dr.GetString(1);
+                            markstxt.Text = Convert.ToString(dr.GetValue(2));
+                            Weightaetxt.Text = Convert.ToString(dr.GetValue(3));
+                            textBox1.Text = Convert.ToString(dr.GetValue(0));
+                        }
+                        dr.Close();
+                        conn.Close();
                     }
-                    dr.Close();
-                    conn.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
             }
         }
@@ -170,6 +173,53 @@ namespace MiniProject
         private void Eval_Dashboards_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Edit_Panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Edit_Panel.Hide();
+        }
+
+        private void AddEvaluationIcon_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            AddEvaluation p1 = new AddEvaluation();
+            p1.Show();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -28,7 +28,9 @@ namespace MiniProject
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            conn.Close();
+            this.Close();
+            
         }
 
         private void Submit_Click(object sender, EventArgs e)
@@ -49,24 +51,48 @@ namespace MiniProject
                         MessageBox.Show("Data Recorded Succesfully");
                         Cancel_Click(sender, e);
                     }
-                    conn.Close();
+                    
+
+                    if (MessageBox.Show("Do you Want to Add Another Student's Data?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        this.Show();
+                    }
+                    else
+                    {
+                        this.Close();
+                        Eval_Dashboards t = new Eval_Dashboards();
+                        t.Show();
+                    }
+
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
+                conn.Close();
             }
             else
             {
 
                 MessageBox.Show("Invalid Data!." +
                     "Please Enter Valid Data");
+                conn.Close();
             }
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void AddEvaluation_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

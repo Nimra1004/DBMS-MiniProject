@@ -33,6 +33,7 @@
             this.Cancel = new System.Windows.Forms.Button();
             this.Submit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.advisercombo = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -53,22 +54,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button2.AutoSize = true;
-            this.button2.BackColor = System.Drawing.SystemColors.Window;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(643, 450);
+            this.button2.BackColor = System.Drawing.Color.CadetBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(644, 388);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(66, 26);
+            this.button2.Size = new System.Drawing.Size(69, 28);
             this.button2.TabIndex = 16;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = false;
@@ -79,11 +81,12 @@
             this.Cancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Cancel.AutoSize = true;
             this.Cancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Cancel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cancel.Location = new System.Drawing.Point(504, 450);
+            this.Cancel.BackColor = System.Drawing.Color.CadetBlue;
+            this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancel.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancel.Location = new System.Drawing.Point(495, 388);
             this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(71, 26);
+            this.Cancel.Size = new System.Drawing.Size(70, 28);
             this.Cancel.TabIndex = 15;
             this.Cancel.Text = "  Clear  \r\n";
             this.Cancel.UseVisualStyleBackColor = false;
@@ -94,11 +97,12 @@
             this.Submit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Submit.AutoSize = true;
             this.Submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Submit.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Submit.Location = new System.Drawing.Point(576, 450);
+            this.Submit.BackColor = System.Drawing.Color.CadetBlue;
+            this.Submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Submit.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Submit.Location = new System.Drawing.Point(568, 388);
             this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(65, 26);
+            this.Submit.Size = new System.Drawing.Size(73, 28);
             this.Submit.TabIndex = 14;
             this.Submit.Text = "Submit\r\n";
             this.Submit.UseVisualStyleBackColor = false;
@@ -108,7 +112,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.BackColor = System.Drawing.Color.Sienna;
+            this.panel1.BackColor = System.Drawing.Color.CadetBlue;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(1, -1);
@@ -116,14 +120,24 @@
             this.panel1.Size = new System.Drawing.Size(313, 527);
             this.panel1.TabIndex = 17;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(33, 227);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(243, 232);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Georgia", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.ForeColor = System.Drawing.SystemColors.Window;
             this.label2.Location = new System.Drawing.Point(36, 166);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(240, 34);
@@ -135,7 +149,10 @@
             this.advisercombo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.advisercombo.BackColor = System.Drawing.SystemColors.Window;
+            this.advisercombo.DisplayMember = "---SELECT---";
             this.advisercombo.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.advisercombo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.advisercombo.FormattingEnabled = true;
             this.advisercombo.Items.AddRange(new object[] {
             "Professor",
@@ -153,7 +170,7 @@
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.Window;
             this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
@@ -186,7 +203,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(470, 310);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(470, 246);
             this.tableLayoutPanel1.TabIndex = 19;
             // 
             // label9
@@ -198,7 +215,7 @@
             this.label9.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(3, 207);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 103);
+            this.label9.Size = new System.Drawing.Size(99, 39);
             this.label9.TabIndex = 18;
             this.label9.Text = "Designation";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -231,7 +248,7 @@
             // 
             this.radioButton1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.radioButton1.BackColor = System.Drawing.SystemColors.Window;
             this.radioButton1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.Location = new System.Drawing.Point(88, 3);
             this.radioButton1.Name = "radioButton1";
@@ -258,8 +275,10 @@
             // 
             // FirstName
             // 
+            this.FirstName.BackColor = System.Drawing.SystemColors.Window;
             this.FirstName.Dock = System.Windows.Forms.DockStyle.Top;
             this.FirstName.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FirstName.Location = new System.Drawing.Point(108, 3);
             this.FirstName.Name = "FirstName";
             this.FirstName.Size = new System.Drawing.Size(359, 22);
@@ -267,8 +286,10 @@
             // 
             // LastName
             // 
+            this.LastName.BackColor = System.Drawing.SystemColors.Window;
             this.LastName.Dock = System.Windows.Forms.DockStyle.Top;
             this.LastName.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.LastName.Location = new System.Drawing.Point(108, 31);
             this.LastName.Name = "LastName";
             this.LastName.Size = new System.Drawing.Size(359, 22);
@@ -276,8 +297,10 @@
             // 
             // Contact
             // 
+            this.Contact.BackColor = System.Drawing.SystemColors.Window;
             this.Contact.Dock = System.Windows.Forms.DockStyle.Top;
             this.Contact.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Contact.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Contact.Location = new System.Drawing.Point(108, 59);
             this.Contact.Name = "Contact";
             this.Contact.Size = new System.Drawing.Size(359, 22);
@@ -285,8 +308,10 @@
             // 
             // Email
             // 
+            this.Email.BackColor = System.Drawing.SystemColors.Window;
             this.Email.Dock = System.Windows.Forms.DockStyle.Top;
             this.Email.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Email.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Email.Location = new System.Drawing.Point(108, 87);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(359, 22);
@@ -294,8 +319,10 @@
             // 
             // Salarytxt
             // 
+            this.Salarytxt.BackColor = System.Drawing.SystemColors.Window;
             this.Salarytxt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Salarytxt.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Salarytxt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Salarytxt.Location = new System.Drawing.Point(108, 182);
             this.Salarytxt.Name = "Salarytxt";
             this.Salarytxt.Size = new System.Drawing.Size(359, 22);
@@ -387,6 +414,7 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.Control;
             this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(108, 115);
@@ -394,35 +422,42 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(359, 22);
             this.dateTimePicker1.TabIndex = 15;
             // 
-            // pictureBox1
+            // button1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(33, 227);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(243, 232);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.SandyBrown;
+            this.button1.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(663, 8);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 62);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "EXIT\r\n";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Addadviser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(800, 524);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.Submit);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "Addadviser";
             this.Text = "Addadviser";
+            this.Load += new System.EventHandler(this.Addadviser_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -454,5 +489,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
