@@ -67,9 +67,9 @@ namespace MiniProject
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             conn.Open();
-            try
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "DELETE" && (e.RowIndex >= 0))
             {
-                if (dataGridView1.Columns[e.ColumnIndex].Name == "DELETE" && (e.RowIndex >= 0))
+                try
                 {
                     if (MessageBox.Show("Are You Sure You Want to Delete this?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
@@ -92,13 +92,15 @@ namespace MiniProject
                         }
                     }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                conn.Close();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            conn.Close();
-            if (dataGridView1.Columns[e.ColumnIndex].Name == "Edit" && (e.RowIndex >= 0))
+            
+
+            else if (dataGridView1.Columns[e.ColumnIndex].Name == "Edit" && (e.RowIndex >= 0))
             {
                 if (MessageBox.Show("Are You Sure You Want to Update this?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -130,13 +132,14 @@ namespace MiniProject
                             textBox1.Text = Convert.ToString(dr.GetValue(0));
                         }
                         dr.Close();
-                        conn.Close();
+                        
 
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message);
                     }
+                    conn.Close();
                 }
                 
              }

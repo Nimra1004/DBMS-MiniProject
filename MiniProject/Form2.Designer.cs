@@ -29,14 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Student_Panel));
-            this.Cancel = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.FirstName = new System.Windows.Forms.TextBox();
             this.LastName = new System.Windows.Forms.TextBox();
             this.Contact = new System.Windows.Forms.TextBox();
             this.Email = new System.Windows.Forms.TextBox();
             this.RegistrationNo = new System.Windows.Forms.TextBox();
-            this.Submit = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,31 +47,17 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Submit = new System.Windows.Forms.Button();
+            this.Cancel = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Cancel
-            // 
-            this.Cancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Cancel.AutoSize = true;
-            this.Cancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Cancel.BackColor = System.Drawing.Color.CadetBlue;
-            this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cancel.Location = new System.Drawing.Point(573, 420);
-            this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(71, 26);
-            this.Cancel.TabIndex = 7;
-            this.Cancel.Text = "  Clear  \r\n";
-            this.Cancel.UseVisualStyleBackColor = false;
-            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // label7
             // 
@@ -84,7 +68,7 @@
             this.label7.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(3, 179);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(160, 36);
+            this.label7.Size = new System.Drawing.Size(160, 43);
             this.label7.TabIndex = 6;
             this.label7.Text = "Registration Number\r\n";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -138,22 +122,6 @@
             this.RegistrationNo.Name = "RegistrationNo";
             this.RegistrationNo.Size = new System.Drawing.Size(337, 22);
             this.RegistrationNo.TabIndex = 13;
-            // 
-            // Submit
-            // 
-            this.Submit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Submit.AutoSize = true;
-            this.Submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Submit.BackColor = System.Drawing.Color.CadetBlue;
-            this.Submit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Submit.Location = new System.Drawing.Point(646, 420);
-            this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(65, 26);
-            this.Submit.TabIndex = 5;
-            this.Submit.Text = "Submit";
-            this.Submit.UseVisualStyleBackColor = false;
-            this.Submit.Click += new System.EventHandler(this.Submit_Click);
             // 
             // label6
             // 
@@ -290,7 +258,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(509, 215);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(509, 222);
             this.tableLayoutPanel1.TabIndex = 4;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -344,21 +312,6 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(337, 22);
             this.dateTimePicker1.TabIndex = 15;
             // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button2.AutoSize = true;
-            this.button2.BackColor = System.Drawing.Color.CadetBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(714, 420);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 26);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.CadetBlue;
@@ -367,7 +320,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(347, 528);
+            this.panel1.Size = new System.Drawing.Size(347, 535);
             this.panel1.TabIndex = 10;
             // 
             // pictureBox1
@@ -381,6 +334,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.SandyBrown;
             this.button1.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(723, 12);
@@ -391,17 +345,65 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.AutoSize = true;
+            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button2.BackColor = System.Drawing.Color.CadetBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(758, 433);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(66, 26);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Cancel";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // Submit
+            // 
+            this.Submit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Submit.AutoSize = true;
+            this.Submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Submit.BackColor = System.Drawing.Color.CadetBlue;
+            this.Submit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Submit.Location = new System.Drawing.Point(687, 433);
+            this.Submit.Name = "Submit";
+            this.Submit.Size = new System.Drawing.Size(65, 26);
+            this.Submit.TabIndex = 5;
+            this.Submit.Text = "Submit";
+            this.Submit.UseVisualStyleBackColor = false;
+            this.Submit.Click += new System.EventHandler(this.Submit_Click);
+            // 
+            // Cancel
+            // 
+            this.Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Cancel.AutoSize = true;
+            this.Cancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Cancel.BackColor = System.Drawing.Color.CadetBlue;
+            this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancel.Location = new System.Drawing.Point(610, 433);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(71, 26);
+            this.Cancel.TabIndex = 7;
+            this.Cancel.Text = "  Clear  \r\n";
+            this.Cancel.UseVisualStyleBackColor = false;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
+            // 
             // Student_Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(863, 528);
+            this.ClientSize = new System.Drawing.Size(863, 535);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Submit);
+            this.Controls.Add(this.Cancel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.Cancel);
-            this.Controls.Add(this.Submit);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Student_Panel";
             this.Text = "Student_Panel";
@@ -419,15 +421,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox FirstName;
         private System.Windows.Forms.TextBox LastName;
         private System.Windows.Forms.TextBox Contact;
         private System.Windows.Forms.TextBox Email;
         private System.Windows.Forms.TextBox RegistrationNo;
-        private System.Windows.Forms.Button Submit;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -437,12 +436,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Submit;
+        private System.Windows.Forms.Button Cancel;
     }
 }
