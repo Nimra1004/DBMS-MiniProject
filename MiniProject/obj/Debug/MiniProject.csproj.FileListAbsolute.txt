@@ -1,0 +1,17 @@
+C:\Users\HP\source\repos\MiniProject\MiniProject\bin\Debug\MiniProject.exe
+C:\Users\HP\source\repos\MiniProject\MiniProject\bin\Debug\MiniProject.exe.config
+C:\Users\HP\source\repos\MiniProject\MiniProject\obj\Debug\MiniProject.Addadviser.resources
+C:\Users\HP\source\repos\MiniProject\MiniProject\obj\Debug\MiniProject.AddEvaluation.resources
+C:\Users\HP\source\repos\MiniProject\MiniProject\obj\Debug\MiniProject.Dashboard.resources
+C:\Users\HP\source\repos\MiniProject\MiniProject\obj\Debug\MiniProject.Eval_Dashboards.resources
+C:\Users\HP\source\repos\MiniProject\MiniProject\obj\Debug\MiniProject.Form1.resources
+C:\Users\HP\source\repos\MiniProject\MiniProject\obj\Debug\MiniProject.Student_Panel.resources
+C:\Users\HP\source\repos\MiniProject\MiniProject\obj\Debug\MiniProject.Form3.resources
+C:\Users\HP\source\repos\MiniProject\MiniProject\obj\Debug\MiniProject.ManageAdviser.resources
+C:\Users\HP\source\repos\MiniProject\MiniProject\obj\Debug\MiniProject.ManageProject.resources
+C:\Users\HP\source\repos\MiniProject\MiniProject\obj\Debug\MiniProject.Properties.Resources.resources
+C:\Users\HP\source\repos\MiniProject\MiniProject\obj\Debug\MiniProject.csproj.GenerateResource.cache
+C:\Users\HP\source\repos\MiniProject\MiniProject\obj\Debug\MiniProject.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\MiniProject\MiniProject\obj\Debug\MiniProject.exe
+C:\Users\HP\source\repos\MiniProject\MiniProject\obj\Debug\MiniProject.pdb
+C:\Users\HP\source\repos\MiniProject\MiniProject\bin\Debug\MiniProject.pdb
