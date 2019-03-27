@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -11,9 +12,10 @@ using System.Windows.Forms;
 namespace MiniProject
 {
     public partial class Form1 : Form
-    {   
-       
-        
+    {
+
+        SqlConnection conn = DatabaseConnection.getInstance().getConnection();
+        SqlDataReader dr;
 
 
         public Form1()
@@ -131,6 +133,72 @@ namespace MiniProject
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Group1 g = new Group1();
+            g.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (conn.State == System.Data.ConnectionState.Open)
+            {
+                try
+                {
+                    //conn.Open();
+                    string k = String.Format("INSERT INTO [Group](Created_On) values('{0}')", DateTime.Now);
+                    //String cmd3 = String.Format("INSERT INTO Student(Id, RegistrationNo) values('{0}', '{1}')", id2, C1.Get_Reg_No());
+                    SqlCommand f = new SqlCommand(k, conn);
+                    int Grp_id = f.ExecuteNonQuery();
+                    conn.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                Group1 g = new Group1();
+                g.Show();
+            }
+            else
+            {
+                conn.Open();
+                try
+                {
+                    //conn.Open();
+                    string k = String.Format("INSERT INTO [Group](Created_On) values('{0}')", DateTime.Now);
+                    //String cmd3 = String.Format("INSERT INTO Student(Id, RegistrationNo) values('{0}', '{1}')", id2, C1.Get_Reg_No());
+                    SqlCommand f = new SqlCommand(k, conn);
+                    int Grp_id = f.ExecuteNonQuery();
+                    conn.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                Group1 g = new Group1();
+                g.Show();
+
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            grps_present_project p = new grps_present_project();
+            p.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Assignadvisor h = new Assignadvisor();
+            h.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            markevaluations g = new markevaluations();
+            g.Show();
         }
     }
 }

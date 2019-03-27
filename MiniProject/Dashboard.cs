@@ -66,9 +66,10 @@ namespace MiniProject
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            conn.Open();
+            
             if (dataGridView1.Columns[e.ColumnIndex].Name == "DELETE" && (e.RowIndex >= 0))
             {
+                conn.Open();
                 try
                 {
                     if (MessageBox.Show("Are You Sure You Want to Delete this?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)

@@ -58,7 +58,20 @@
     <Compile Include="AddEvaluation.Designer.cs">
       <DependentUpon>AddEvaluation.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddStudenttoExistinggrp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStudenttoExistinggrp.Designer.cs">
+      <DependentUpon>AddStudenttoExistinggrp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADD_Group.cs" />
     <Compile Include="Adviser.cs" />
+    <Compile Include="Assignadvisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assignadvisor.Designer.cs">
+      <DependentUpon>Assignadvisor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +104,18 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Group1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Group1.Designer.cs">
+      <DependentUpon>Group1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="grps_present_project.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="grps_present_project.Designer.cs">
+      <DependentUpon>grps_present_project.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageAdviser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,8 +128,15 @@
     <Compile Include="ManageProject.Designer.cs">
       <DependentUpon>ManageProject.cs</DependentUpon>
     </Compile>
+    <Compile Include="markevaluations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="markevaluations.Designer.cs">
+      <DependentUpon>markevaluations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Project.cs" />
+    <Compile Include="Projectgrp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
     <EmbeddedResource Include="Addadviser.resx">
@@ -112,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddEvaluation.resx">
       <DependentUpon>AddEvaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assignadvisor.resx">
+      <DependentUpon>Assignadvisor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -128,11 +163,20 @@
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Group1.resx">
+      <DependentUpon>Group1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="grps_present_project.resx">
+      <DependentUpon>grps_present_project.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageAdviser.resx">
       <DependentUpon>ManageAdviser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageProject.resx">
       <DependentUpon>ManageProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="markevaluations.resx">
+      <DependentUpon>markevaluations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
