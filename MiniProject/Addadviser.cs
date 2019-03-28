@@ -22,6 +22,35 @@ namespace MiniProject
 
         private void Cancel_Click(object sender, EventArgs e)
         {
+            
+
+        }
+
+        private void CANCEL_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void SUMBIT_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Addadviser_Load(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
+        private void CLEAR_Click(object sender, EventArgs e)
+        {
             advisercombo.Text = "";
             Salarytxt.Text = "";
             FirstName.Text = " ";
@@ -31,15 +60,14 @@ namespace MiniProject
             dateTimePicker1.Value = DateTime.Now;
             radioButton1.Checked = false;
             radioButton2.Checked = false;
-
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void CANCEL_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
-        private void Submit_Click(object sender, EventArgs e)
+        private void SUMBIT_Click_1(object sender, EventArgs e)
         {
             string value = "";
             bool isChecked = radioButton1.Checked;
@@ -123,9 +151,9 @@ namespace MiniProject
                 {
                     try
                     {
-                        String cmd3 = String.Format("INSERT INTO Advisor(Id, Designation, Salary) values('{0}', '{1}', '{2}')" , id2, id_lookup, C1.Get_Salary());
+                        String cmd3 = String.Format("INSERT INTO Advisor(Id, Designation, Salary) values('{0}', '{1}', '{2}')", id2, id_lookup, C1.Get_Salary());
                         int rows2 = DatabaseConnection.getInstance().exectuteQuery(cmd3);
-                        if (rows != 0 && rows2!=0)
+                        if (rows != 0 && rows2 != 0)
                         {
                             MessageBox.Show("Data Recorded Succesfully");
                             Cancel_Click(sender, e);
@@ -148,21 +176,6 @@ namespace MiniProject
                     }
                 }
             }
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Addadviser_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
+            }
     }
 }

@@ -29,15 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Addadviser));
-            this.button2 = new System.Windows.Forms.Button();
-            this.Cancel = new System.Windows.Forms.Button();
-            this.Submit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.advisercombo = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
+            this.advisercombo = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -54,59 +51,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
+            this.CANCEL = new System.Windows.Forms.Button();
+            this.CLEAR = new System.Windows.Forms.Button();
+            this.SUMBIT = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button2.AutoSize = true;
-            this.button2.BackColor = System.Drawing.Color.CadetBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(644, 388);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(69, 28);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // Cancel
-            // 
-            this.Cancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Cancel.AutoSize = true;
-            this.Cancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Cancel.BackColor = System.Drawing.Color.CadetBlue;
-            this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cancel.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cancel.Location = new System.Drawing.Point(495, 388);
-            this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(70, 28);
-            this.Cancel.TabIndex = 15;
-            this.Cancel.Text = "  Clear  \r\n";
-            this.Cancel.UseVisualStyleBackColor = false;
-            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
-            // 
-            // Submit
-            // 
-            this.Submit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Submit.AutoSize = true;
-            this.Submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Submit.BackColor = System.Drawing.Color.CadetBlue;
-            this.Submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Submit.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Submit.Location = new System.Drawing.Point(568, 388);
-            this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(73, 28);
-            this.Submit.TabIndex = 14;
-            this.Submit.Text = "Submit\r\n";
-            this.Submit.UseVisualStyleBackColor = false;
-            this.Submit.Click += new System.EventHandler(this.Submit_Click);
             // 
             // panel1
             // 
@@ -144,27 +96,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "  Add Advisror  ";
             // 
-            // advisercombo
-            // 
-            this.advisercombo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.advisercombo.BackColor = System.Drawing.SystemColors.Window;
-            this.advisercombo.DisplayMember = "---SELECT---";
-            this.advisercombo.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.advisercombo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.advisercombo.FormattingEnabled = true;
-            this.advisercombo.Items.AddRange(new object[] {
-            "Professor",
-            "Associate Professor",
-            "Assisstant Professor",
-            "Lecturer",
-            "Industry Professional"});
-            this.advisercombo.Location = new System.Drawing.Point(108, 210);
-            this.advisercombo.Name = "advisercombo";
-            this.advisercombo.Size = new System.Drawing.Size(359, 24);
-            this.advisercombo.TabIndex = 18;
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -191,7 +122,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 1, 4);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(321, 126);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(320, 181);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
@@ -203,8 +134,8 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(470, 246);
-            this.tableLayoutPanel1.TabIndex = 19;
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(471, 251);
+            this.tableLayoutPanel1.TabIndex = 27;
             // 
             // label9
             // 
@@ -215,10 +146,31 @@
             this.label9.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(3, 207);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 39);
+            this.label9.Size = new System.Drawing.Size(99, 44);
             this.label9.TabIndex = 18;
             this.label9.Text = "Designation";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // advisercombo
+            // 
+            this.advisercombo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.advisercombo.BackColor = System.Drawing.SystemColors.Window;
+            this.advisercombo.DisplayMember = "---SELECT---";
+            this.advisercombo.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.advisercombo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.advisercombo.FormattingEnabled = true;
+            this.advisercombo.Items.AddRange(new object[] {
+            "Professor",
+            "Associate Professor",
+            "Assisstant Professor",
+            "Lecturer",
+            "Industry Professional"});
+            this.advisercombo.Location = new System.Drawing.Point(108, 210);
+            this.advisercombo.Name = "advisercombo";
+            this.advisercombo.Size = new System.Drawing.Size(360, 24);
+            this.advisercombo.TabIndex = 18;
             // 
             // flowLayoutPanel1
             // 
@@ -226,7 +178,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.Controls.Add(this.radioButton2);
             this.flowLayoutPanel1.Controls.Add(this.radioButton1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(231, 143);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(232, 143);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(236, 33);
             this.flowLayoutPanel1.TabIndex = 17;
@@ -281,7 +233,7 @@
             this.FirstName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FirstName.Location = new System.Drawing.Point(108, 3);
             this.FirstName.Name = "FirstName";
-            this.FirstName.Size = new System.Drawing.Size(359, 22);
+            this.FirstName.Size = new System.Drawing.Size(360, 22);
             this.FirstName.TabIndex = 7;
             // 
             // LastName
@@ -292,7 +244,7 @@
             this.LastName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.LastName.Location = new System.Drawing.Point(108, 31);
             this.LastName.Name = "LastName";
-            this.LastName.Size = new System.Drawing.Size(359, 22);
+            this.LastName.Size = new System.Drawing.Size(360, 22);
             this.LastName.TabIndex = 8;
             // 
             // Contact
@@ -303,7 +255,7 @@
             this.Contact.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Contact.Location = new System.Drawing.Point(108, 59);
             this.Contact.Name = "Contact";
-            this.Contact.Size = new System.Drawing.Size(359, 22);
+            this.Contact.Size = new System.Drawing.Size(360, 22);
             this.Contact.TabIndex = 9;
             // 
             // Email
@@ -314,7 +266,7 @@
             this.Email.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Email.Location = new System.Drawing.Point(108, 87);
             this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(359, 22);
+            this.Email.Size = new System.Drawing.Size(360, 22);
             this.Email.TabIndex = 10;
             // 
             // Salarytxt
@@ -325,7 +277,7 @@
             this.Salarytxt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Salarytxt.Location = new System.Drawing.Point(108, 182);
             this.Salarytxt.Name = "Salarytxt";
-            this.Salarytxt.Size = new System.Drawing.Size(359, 22);
+            this.Salarytxt.Size = new System.Drawing.Size(360, 22);
             this.Salarytxt.TabIndex = 13;
             // 
             // label6
@@ -419,21 +371,55 @@
             this.dateTimePicker1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(108, 115);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(359, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(360, 22);
             this.dateTimePicker1.TabIndex = 15;
             // 
-            // button1
+            // CANCEL
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.SandyBrown;
-            this.button1.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(663, 8);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 62);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "EXIT\r\n";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.CANCEL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.CANCEL.AutoSize = true;
+            this.CANCEL.BackColor = System.Drawing.Color.CadetBlue;
+            this.CANCEL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CANCEL.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CANCEL.Location = new System.Drawing.Point(651, 440);
+            this.CANCEL.Name = "CANCEL";
+            this.CANCEL.Size = new System.Drawing.Size(69, 28);
+            this.CANCEL.TabIndex = 26;
+            this.CANCEL.Text = "Cancel";
+            this.CANCEL.UseVisualStyleBackColor = false;
+            this.CANCEL.Click += new System.EventHandler(this.CANCEL_Click_1);
+            // 
+            // CLEAR
+            // 
+            this.CLEAR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.CLEAR.AutoSize = true;
+            this.CLEAR.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.CLEAR.BackColor = System.Drawing.Color.CadetBlue;
+            this.CLEAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CLEAR.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CLEAR.Location = new System.Drawing.Point(502, 440);
+            this.CLEAR.Name = "CLEAR";
+            this.CLEAR.Size = new System.Drawing.Size(70, 28);
+            this.CLEAR.TabIndex = 25;
+            this.CLEAR.Text = "  Clear  \r\n";
+            this.CLEAR.UseVisualStyleBackColor = false;
+            this.CLEAR.Click += new System.EventHandler(this.CLEAR_Click);
+            // 
+            // SUMBIT
+            // 
+            this.SUMBIT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SUMBIT.AutoSize = true;
+            this.SUMBIT.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.SUMBIT.BackColor = System.Drawing.Color.CadetBlue;
+            this.SUMBIT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SUMBIT.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SUMBIT.Location = new System.Drawing.Point(575, 440);
+            this.SUMBIT.Name = "SUMBIT";
+            this.SUMBIT.Size = new System.Drawing.Size(73, 28);
+            this.SUMBIT.TabIndex = 24;
+            this.SUMBIT.Text = "Submit\r\n";
+            this.SUMBIT.UseVisualStyleBackColor = false;
+            this.SUMBIT.Click += new System.EventHandler(this.SUMBIT_Click_1);
             // 
             // Addadviser
             // 
@@ -441,12 +427,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(800, 524);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.SUMBIT);
+            this.Controls.Add(this.CANCEL);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.CLEAR);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.Cancel);
-            this.Controls.Add(this.Submit);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "Addadviser";
             this.Text = "Addadviser";
@@ -464,14 +449,12 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button Cancel;
-        private System.Windows.Forms.Button Submit;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox advisercombo;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox advisercombo;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
@@ -488,7 +471,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button CANCEL;
+        private System.Windows.Forms.Button CLEAR;
+        private System.Windows.Forms.Button SUMBIT;
     }
 }

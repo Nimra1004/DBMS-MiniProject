@@ -184,5 +184,10 @@ namespace MiniProject
         {
             this.Hide();
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

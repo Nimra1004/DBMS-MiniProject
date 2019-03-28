@@ -21,8 +21,9 @@ namespace MiniProject
         public Form1()
         {
             InitializeComponent();
-            DataPanel.Hide();
-            ManagePanel.Hide();
+            //DataPanel.Hide();
+            panel2.Hide();
+            //ManagePanel.Hide();
             
         }
 
@@ -99,8 +100,8 @@ namespace MiniProject
 
         private void mnage_Click(object sender, EventArgs e)
         {
-            ManagePanel.Show();
-            DataPanel.Hide();
+            //ManagePanel.Show();
+            //DataPanel.Hide();
         }
 
         private void Add_Project_Click_1(object sender, EventArgs e)
@@ -126,8 +127,8 @@ namespace MiniProject
 
         private void Managebtn_Click_1(object sender, EventArgs e)
         {
-            DataPanel.Show();
-            ManagePanel.Hide();
+            //DataPanel.Show();
+            //ManagePanel.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -205,6 +206,25 @@ namespace MiniProject
         {
             AddStudenttoExistinggrp h = new AddStudenttoExistinggrp();
             h.Show();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            
+            if(panel2.Visible == true)
+            {
+                panel2.Hide();
+            }
+            else
+            {
+                panel2.Show();
+            }
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            Report1 n = new Report1();
+            n.Show();
         }
     }
 }

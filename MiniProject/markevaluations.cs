@@ -116,6 +116,14 @@ namespace MiniProject
 
         }
 
-        
+        private void label8_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }

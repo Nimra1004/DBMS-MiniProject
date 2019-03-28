@@ -42,7 +42,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.Cancel = new System.Windows.Forms.Button();
             this.Submit = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -227,26 +226,12 @@
             this.Submit.UseVisualStyleBackColor = false;
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
             // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.SandyBrown;
-            this.button1.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(663, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 62);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "EXIT\r\n";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // AddEvaluation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(800, 566);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
@@ -280,6 +265,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox totalweightagetxt;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
     }
 }

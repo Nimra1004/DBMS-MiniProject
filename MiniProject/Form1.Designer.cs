@@ -30,48 +30,60 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Add_Students = new System.Windows.Forms.Label();
             this.Manage_student = new System.Windows.Forms.Button();
             this.Projectbutton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.ManageEvaluation = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.ManageAdvisor = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.ManagePanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.DataPanel = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.advisorpicbox = new System.Windows.Forms.PictureBox();
             this.AddEvaluationIcon = new System.Windows.Forms.PictureBox();
             this.Add_Project = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.mnage = new System.Windows.Forms.Button();
-            this.Managebtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.ManagePanel.SuspendLayout();
-            this.DataPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advisorpicbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddEvaluationIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Add_Project)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(11, 98);
+            this.pictureBox1.Location = new System.Drawing.Point(21, 90);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(42, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -79,28 +91,17 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // Add_Students
-            // 
-            this.Add_Students.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Add_Students.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add_Students.ForeColor = System.Drawing.Color.Navy;
-            this.Add_Students.Location = new System.Drawing.Point(53, 103);
-            this.Add_Students.Name = "Add_Students";
-            this.Add_Students.Size = new System.Drawing.Size(107, 27);
-            this.Add_Students.TabIndex = 5;
-            this.Add_Students.Text = "Students\r\n";
-            // 
             // Manage_student
             // 
             this.Manage_student.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Manage_student.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Manage_student.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.Manage_student.BackColor = System.Drawing.Color.Navy;
             this.Manage_student.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Manage_student.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Manage_student.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Manage_student.Location = new System.Drawing.Point(3, 88);
+            this.Manage_student.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Manage_student.Location = new System.Drawing.Point(190, 95);
             this.Manage_student.Name = "Manage_student";
-            this.Manage_student.Size = new System.Drawing.Size(136, 58);
+            this.Manage_student.Size = new System.Drawing.Size(136, 66);
             this.Manage_student.TabIndex = 6;
             this.Manage_student.Text = "Manage\r\nStudents";
             this.Manage_student.UseVisualStyleBackColor = false;
@@ -110,156 +111,68 @@
             // 
             this.Projectbutton.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Projectbutton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Projectbutton.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.Projectbutton.BackColor = System.Drawing.Color.Navy;
             this.Projectbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Projectbutton.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Projectbutton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Projectbutton.Location = new System.Drawing.Point(3, 148);
+            this.Projectbutton.Location = new System.Drawing.Point(190, 169);
             this.Projectbutton.Name = "Projectbutton";
-            this.Projectbutton.Size = new System.Drawing.Size(136, 57);
+            this.Projectbutton.Size = new System.Drawing.Size(136, 69);
             this.Projectbutton.TabIndex = 8;
             this.Projectbutton.Text = "Manage \r\nProject";
             this.Projectbutton.UseVisualStyleBackColor = false;
             this.Projectbutton.Click += new System.EventHandler(this.Projectbutton_Click);
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(58, 157);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 27);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Projects";
-            // 
             // ManageEvaluation
             // 
             this.ManageEvaluation.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ManageEvaluation.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ManageEvaluation.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.ManageEvaluation.BackColor = System.Drawing.Color.Navy;
             this.ManageEvaluation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ManageEvaluation.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ManageEvaluation.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.ManageEvaluation.Location = new System.Drawing.Point(3, 264);
+            this.ManageEvaluation.Location = new System.Drawing.Point(190, 321);
             this.ManageEvaluation.Name = "ManageEvaluation";
-            this.ManageEvaluation.Size = new System.Drawing.Size(136, 57);
+            this.ManageEvaluation.Size = new System.Drawing.Size(136, 69);
             this.ManageEvaluation.TabIndex = 11;
             this.ManageEvaluation.Text = "Manage \r\nEvaluations";
             this.ManageEvaluation.UseVisualStyleBackColor = false;
             this.ManageEvaluation.Click += new System.EventHandler(this.ManageEvaluation_Click);
             // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(57, 263);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 27);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Evaluations";
-            // 
             // ManageAdvisor
             // 
             this.ManageAdvisor.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ManageAdvisor.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ManageAdvisor.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.ManageAdvisor.BackColor = System.Drawing.Color.Navy;
             this.ManageAdvisor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ManageAdvisor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ManageAdvisor.Font = new System.Drawing.Font("Georgia", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ManageAdvisor.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.ManageAdvisor.Location = new System.Drawing.Point(3, 207);
+            this.ManageAdvisor.Location = new System.Drawing.Point(190, 247);
             this.ManageAdvisor.Name = "ManageAdvisor";
-            this.ManageAdvisor.Size = new System.Drawing.Size(136, 55);
+            this.ManageAdvisor.Size = new System.Drawing.Size(136, 68);
             this.ManageAdvisor.TabIndex = 14;
             this.ManageAdvisor.Text = "Manage \r\nAdvisor";
             this.ManageAdvisor.UseVisualStyleBackColor = false;
             this.ManageAdvisor.Click += new System.EventHandler(this.ManageAdvisor_Click);
             // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Navy;
-            this.label4.Location = new System.Drawing.Point(57, 215);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 27);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Advisor";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(348, 580);
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // ManagePanel
-            // 
-            this.ManagePanel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.ManagePanel.BackColor = System.Drawing.Color.Transparent;
-            this.ManagePanel.Controls.Add(this.label1);
-            this.ManagePanel.Controls.Add(this.Manage_student);
-            this.ManagePanel.Controls.Add(this.ManageEvaluation);
-            this.ManagePanel.Controls.Add(this.Projectbutton);
-            this.ManagePanel.Controls.Add(this.ManageAdvisor);
-            this.ManagePanel.Location = new System.Drawing.Point(511, 114);
-            this.ManagePanel.Name = "ManagePanel";
-            this.ManagePanel.Size = new System.Drawing.Size(194, 364);
-            this.ManagePanel.TabIndex = 18;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(3, 49);
+            this.label1.ForeColor = System.Drawing.Color.Navy;
+            this.label1.Location = new System.Drawing.Point(189, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 23);
             this.label1.TabIndex = 15;
             this.label1.Text = "Manage Data";
             // 
-            // DataPanel
-            // 
-            this.DataPanel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.DataPanel.BackColor = System.Drawing.Color.Transparent;
-            this.DataPanel.Controls.Add(this.label5);
-            this.DataPanel.Controls.Add(this.advisorpicbox);
-            this.DataPanel.Controls.Add(this.AddEvaluationIcon);
-            this.DataPanel.Controls.Add(this.label4);
-            this.DataPanel.Controls.Add(this.Add_Project);
-            this.DataPanel.Controls.Add(this.pictureBox1);
-            this.DataPanel.Controls.Add(this.label3);
-            this.DataPanel.Controls.Add(this.Add_Students);
-            this.DataPanel.Controls.Add(this.label2);
-            this.DataPanel.Location = new System.Drawing.Point(511, 112);
-            this.DataPanel.Name = "DataPanel";
-            this.DataPanel.Size = new System.Drawing.Size(219, 364);
-            this.DataPanel.TabIndex = 19;
-            this.DataPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Navy;
-            this.label5.Location = new System.Drawing.Point(32, 49);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 23);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Add Data";
-            // 
             // advisorpicbox
             // 
             this.advisorpicbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.advisorpicbox.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.advisorpicbox.BackColor = System.Drawing.Color.Transparent;
             this.advisorpicbox.Image = ((System.Drawing.Image)(resources.GetObject("advisorpicbox.Image")));
-            this.advisorpicbox.Location = new System.Drawing.Point(11, 203);
+            this.advisorpicbox.Location = new System.Drawing.Point(21, 242);
             this.advisorpicbox.Name = "advisorpicbox";
             this.advisorpicbox.Size = new System.Drawing.Size(42, 42);
             this.advisorpicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -270,9 +183,9 @@
             // AddEvaluationIcon
             // 
             this.AddEvaluationIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddEvaluationIcon.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.AddEvaluationIcon.BackColor = System.Drawing.Color.Transparent;
             this.AddEvaluationIcon.Image = ((System.Drawing.Image)(resources.GetObject("AddEvaluationIcon.Image")));
-            this.AddEvaluationIcon.Location = new System.Drawing.Point(12, 254);
+            this.AddEvaluationIcon.Location = new System.Drawing.Point(21, 316);
             this.AddEvaluationIcon.Name = "AddEvaluationIcon";
             this.AddEvaluationIcon.Size = new System.Drawing.Size(42, 43);
             this.AddEvaluationIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -283,9 +196,9 @@
             // Add_Project
             // 
             this.Add_Project.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Add_Project.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.Add_Project.BackColor = System.Drawing.Color.Transparent;
             this.Add_Project.Image = ((System.Drawing.Image)(resources.GetObject("Add_Project.Image")));
-            this.Add_Project.Location = new System.Drawing.Point(11, 148);
+            this.Add_Project.Location = new System.Drawing.Point(21, 164);
             this.Add_Project.Name = "Add_Project";
             this.Add_Project.Size = new System.Drawing.Size(42, 43);
             this.Add_Project.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -293,46 +206,15 @@
             this.Add_Project.TabStop = false;
             this.Add_Project.Click += new System.EventHandler(this.Add_Project_Click_1);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(28, 290);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(295, 295);
-            this.pictureBox3.TabIndex = 20;
-            this.pictureBox3.TabStop = false;
-            // 
-            // mnage
-            // 
-            this.mnage.BackColor = System.Drawing.Color.SandyBrown;
-            this.mnage.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnage.Location = new System.Drawing.Point(627, 22);
-            this.mnage.Name = "mnage";
-            this.mnage.Size = new System.Drawing.Size(128, 62);
-            this.mnage.TabIndex = 1;
-            this.mnage.Text = "Manage Data\r\n";
-            this.mnage.UseVisualStyleBackColor = false;
-            this.mnage.Click += new System.EventHandler(this.mnage_Click);
-            // 
-            // Managebtn
-            // 
-            this.Managebtn.BackColor = System.Drawing.Color.SandyBrown;
-            this.Managebtn.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Managebtn.Location = new System.Drawing.Point(499, 22);
-            this.Managebtn.Name = "Managebtn";
-            this.Managebtn.Size = new System.Drawing.Size(128, 62);
-            this.Managebtn.TabIndex = 21;
-            this.Managebtn.Text = "ADD Data\r\n";
-            this.Managebtn.UseVisualStyleBackColor = false;
-            this.Managebtn.Click += new System.EventHandler(this.Managebtn_Click_1);
-            // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.SandyBrown;
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(756, 22);
+            this.button1.Location = new System.Drawing.Point(624, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 62);
+            this.button1.Size = new System.Drawing.Size(84, 63);
             this.button1.TabIndex = 22;
             this.button1.Text = "EXIT\r\n";
             this.button1.UseVisualStyleBackColor = false;
@@ -340,11 +222,13 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.SandyBrown;
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(370, 22);
+            this.button2.Location = new System.Drawing.Point(371, 1);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 62);
+            this.button2.Size = new System.Drawing.Size(119, 62);
             this.button2.TabIndex = 24;
             this.button2.Text = "Group Students";
             this.button2.UseVisualStyleBackColor = false;
@@ -352,11 +236,12 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.SandyBrown;
+            this.button3.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(370, 229);
+            this.button3.Location = new System.Drawing.Point(0, 1);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(128, 62);
+            this.button3.Size = new System.Drawing.Size(119, 62);
             this.button3.TabIndex = 25;
             this.button3.Text = "Assign Project\r\n";
             this.button3.UseVisualStyleBackColor = false;
@@ -364,11 +249,13 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.SandyBrown;
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button4.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(370, 90);
+            this.button4.Location = new System.Drawing.Point(261, 1);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(128, 62);
+            this.button4.Size = new System.Drawing.Size(107, 62);
             this.button4.TabIndex = 26;
             this.button4.Text = "Assign Advisor";
             this.button4.UseVisualStyleBackColor = false;
@@ -376,11 +263,12 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.SandyBrown;
+            this.button5.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(370, 161);
+            this.button5.Location = new System.Drawing.Point(121, 1);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(128, 62);
+            this.button5.Size = new System.Drawing.Size(137, 62);
             this.button5.TabIndex = 27;
             this.button5.Text = "Mark Evaluation\r\n";
             this.button5.UseVisualStyleBackColor = false;
@@ -388,48 +276,271 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.SandyBrown;
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button6.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(370, 292);
+            this.button6.Location = new System.Drawing.Point(493, 0);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(128, 62);
+            this.button6.Size = new System.Drawing.Size(128, 63);
             this.button6.TabIndex = 28;
             this.button6.Text = "Existing Group";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(345, 651);
+            this.panel1.TabIndex = 29;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.pictureBox6);
+            this.panel3.Location = new System.Drawing.Point(-2, 192);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(347, 62);
+            this.panel3.TabIndex = 21;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(71, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(163, 25);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "DASHBOARD";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox6.BackColor = System.Drawing.Color.White;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(23, 5);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(42, 40);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 24;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel2.BackColor = System.Drawing.SystemColors.Info;
+            this.panel2.Controls.Add(this.ManageEvaluation);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.ManageAdvisor);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.Projectbutton);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.Manage_student);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.AddEvaluationIcon);
+            this.panel2.Controls.Add(this.pictureBox5);
+            this.panel2.Controls.Add(this.advisorpicbox);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.Add_Project);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.pictureBox4);
+            this.panel2.Location = new System.Drawing.Point(0, 251);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(345, 416);
+            this.panel2.TabIndex = 20;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Navy;
+            this.label3.Location = new System.Drawing.Point(17, 362);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(117, 23);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Evaluation";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Navy;
+            this.label4.Location = new System.Drawing.Point(17, 287);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(87, 23);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Advisor";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Navy;
+            this.label2.Location = new System.Drawing.Point(17, 210);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 23);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Project";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Navy;
+            this.label7.Location = new System.Drawing.Point(17, 133);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(88, 23);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Student";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(230, 8);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(42, 40);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 23;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Navy;
+            this.label6.Location = new System.Drawing.Point(17, 54);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(120, 23);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "DashBoard";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(21, 12);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(42, 40);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 17;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(345, 651);
+            this.pictureBox2.TabIndex = 19;
+            this.pictureBox2.TabStop = false;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel4.Controls.Add(this.button3);
+            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.button5);
+            this.panel4.Controls.Add(this.button6);
+            this.panel4.Controls.Add(this.button4);
+            this.panel4.Controls.Add(this.button2);
+            this.panel4.Location = new System.Drawing.Point(345, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(728, 63);
+            this.panel4.TabIndex = 30;
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel5.Controls.Add(this.label9);
+            this.panel5.Controls.Add(this.label8);
+            this.panel5.Location = new System.Drawing.Point(345, 60);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(708, 211);
+            this.panel5.TabIndex = 31;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Mistral", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(207, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(296, 114);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Finally";
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
+            this.panel6.Location = new System.Drawing.Point(345, 192);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(709, 459);
+            this.panel6.TabIndex = 32;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(94, 52);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "label9";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(896, 580);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.Managebtn);
-            this.Controls.Add(this.mnage);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.DataPanel);
-            this.Controls.Add(this.ManagePanel);
-            this.Controls.Add(this.pictureBox2);
+            this.BackColor = System.Drawing.Color.Azure;
+            this.ClientSize = new System.Drawing.Size(1053, 651);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel5);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.ManagePanel.ResumeLayout(false);
-            this.ManagePanel.PerformLayout();
-            this.DataPanel.ResumeLayout(false);
-            this.DataPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advisorpicbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddEvaluationIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Add_Project)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -437,32 +548,39 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label Add_Students;
         private System.Windows.Forms.Button Manage_student;
         private System.Windows.Forms.Button Projectbutton;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button ManageEvaluation;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button ManageAdvisor;
-        private System.Windows.Forms.Label label4;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel ManagePanel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel DataPanel;
         private System.Windows.Forms.PictureBox advisorpicbox;
         private System.Windows.Forms.PictureBox AddEvaluationIcon;
         private System.Windows.Forms.PictureBox Add_Project;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button mnage;
-        private System.Windows.Forms.Button Managebtn;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label9;
     }
 }
 

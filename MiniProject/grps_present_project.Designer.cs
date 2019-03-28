@@ -34,23 +34,25 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(grps_present_project));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Created_On = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AssignProject = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.projectid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Created_On = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AssignProject = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label8)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -89,6 +91,26 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
+            // Created_On
+            // 
+            this.Created_On.HeaderText = "Created_On";
+            this.Created_On.Name = "Created_On";
+            // 
+            // AssignProject
+            // 
+            this.AssignProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AssignProject.HeaderText = "Assign Project";
+            this.AssignProject.Name = "AssignProject";
+            this.AssignProject.Text = "Assign Project";
+            this.AssignProject.ToolTipText = "Assign Project";
+            this.AssignProject.UseColumnTextForButtonValue = true;
+            // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -100,6 +122,31 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(389, 345);
             this.panel1.TabIndex = 1;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.CadetBlue;
+            this.button2.Location = new System.Drawing.Point(311, 9);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Cancel";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label2.Location = new System.Drawing.Point(3, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(213, 31);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Assign Project";
             // 
             // dataGridView2
             // 
@@ -138,56 +185,6 @@
             this.dataGridView2.TabIndex = 9;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(713, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(4, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(437, 31);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Assign New Group to Students";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label2.Location = new System.Drawing.Point(3, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(213, 31);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Assign Project";
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.CadetBlue;
-            this.button2.Location = new System.Drawing.Point(311, 9);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // projectid
             // 
             this.projectid.HeaderText = "Id";
@@ -213,25 +210,28 @@
             this.dataGridViewButtonColumn1.ToolTipText = "AssignProject";
             this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
             // 
-            // Id
+            // label1
             // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.Visible = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(58, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(437, 31);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Assign New Group to Students";
             // 
-            // Created_On
+            // label8
             // 
-            this.Created_On.HeaderText = "Created_On";
-            this.Created_On.Name = "Created_On";
-            // 
-            // AssignProject
-            // 
-            this.AssignProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AssignProject.HeaderText = "Assign Project";
-            this.AssignProject.Name = "AssignProject";
-            this.AssignProject.Text = "Assign Project";
-            this.AssignProject.ToolTipText = "Assign Project";
-            this.AssignProject.UseColumnTextForButtonValue = true;
+            this.label8.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.label8.Image = ((System.Drawing.Image)(resources.GetObject("label8.Image")));
+            this.label8.Location = new System.Drawing.Point(10, 7);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(42, 40);
+            this.label8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.label8.TabIndex = 21;
+            this.label8.TabStop = false;
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // grps_present_project
             // 
@@ -239,7 +239,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
@@ -250,6 +250,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.label8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,7 +261,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
@@ -271,5 +271,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Created_On;
         private System.Windows.Forms.DataGridViewButtonColumn AssignProject;
+        private System.Windows.Forms.PictureBox label8;
     }
 }

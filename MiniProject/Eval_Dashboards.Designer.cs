@@ -56,7 +56,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.AddEvaluationIcon = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.Edit_Panel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -152,7 +151,6 @@
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(108, 28);
@@ -225,7 +223,7 @@
             this.Cancel.ForeColor = System.Drawing.Color.White;
             this.Cancel.Location = new System.Drawing.Point(154, 212);
             this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(79, 28);
+            this.Cancel.Size = new System.Drawing.Size(73, 28);
             this.Cancel.TabIndex = 16;
             this.Cancel.Text = "  Clear  \r\n";
             this.Cancel.UseVisualStyleBackColor = false;
@@ -242,7 +240,7 @@
             this.Submit.ForeColor = System.Drawing.Color.White;
             this.Submit.Location = new System.Drawing.Point(233, 212);
             this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(72, 28);
+            this.Submit.Size = new System.Drawing.Size(71, 28);
             this.Submit.TabIndex = 15;
             this.Submit.Text = "Update";
             this.Submit.UseVisualStyleBackColor = false;
@@ -345,7 +343,6 @@
             // 
             // AddEvaluationIcon
             // 
-            this.AddEvaluationIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.AddEvaluationIcon.BackColor = System.Drawing.Color.CornflowerBlue;
             this.AddEvaluationIcon.Image = ((System.Drawing.Image)(resources.GetObject("AddEvaluationIcon.Image")));
             this.AddEvaluationIcon.Location = new System.Drawing.Point(60, 15);
@@ -368,26 +365,12 @@
             this.label8.TabStop = false;
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.SandyBrown;
-            this.button1.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(660, 11);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 62);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "EXIT\r\n";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Eval_Dashboards
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.AddEvaluationIcon);
             this.Controls.Add(this.Edit_Panel);
@@ -432,6 +415,5 @@
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private System.Windows.Forms.PictureBox AddEvaluationIcon;
         private System.Windows.Forms.PictureBox label8;
-        private System.Windows.Forms.Button button1;
     }
 }
