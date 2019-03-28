@@ -104,6 +104,11 @@
     </Compile>
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="Evaluation.cs" />
+    <Compile Include="EvaluationDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EvaluationDataset.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Eval_Dashboards.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +173,12 @@
     <Compile Include="Report1.Designer.cs">
       <DependentUpon>Report1.cs</DependentUpon>
     </Compile>
+    <Compile Include="REport2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REport2.Designer.cs">
+      <DependentUpon>REport2.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Student.cs" />
     <EmbeddedResource Include="Addadviser.resx">
@@ -225,6 +236,10 @@
     <EmbeddedResource Include="Report1.resx">
       <DependentUpon>Report1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="REport2.resx">
+      <DependentUpon>REport2.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Advisordataset.xsc">
       <DependentUpon>Advisordataset.xsd</DependentUpon>
     </None>
@@ -235,6 +250,17 @@
     </None>
     <None Include="Advisordataset.xss">
       <DependentUpon>Advisordataset.xsd</DependentUpon>
+    </None>
+    <None Include="EvaluationDataset.xsc">
+      <DependentUpon>EvaluationDataset.xsd</DependentUpon>
+    </None>
+    <None Include="EvaluationDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EvaluationDataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="EvaluationDataset.xss">
+      <DependentUpon>EvaluationDataset.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -226,5 +226,11 @@ namespace MiniProject
             Report1 n = new Report1();
             n.Show();
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            REport2 m = new REport2();
+            m.Show();
+        }
     }
 }

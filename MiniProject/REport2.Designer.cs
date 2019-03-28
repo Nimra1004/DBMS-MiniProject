@@ -1,6 +1,6 @@
 ﻿namespace MiniProject
 {
-    partial class Report1
+    partial class REport2
     {
         /// <summary>
         /// Required designer variable.
@@ -30,60 +30,53 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Advisordataset = new MiniProject.Advisordataset();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DataTable1TableAdapter = new MiniProject.AdvisordatasetTableAdapters.DataTable1TableAdapter();
+            this.EvaluationDataset = new MiniProject.EvaluationDataset();
+            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataTable1TableAdapter = new MiniProject.EvaluationDatasetTableAdapters.DataTable1TableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.EvaluationDataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Advisordataset)).BeginInit();
             this.SuspendLayout();
-            // 
-            // DataTable1BindingSource
-            // 
-            this.DataTable1BindingSource.DataMember = "DataTable1";
-            this.DataTable1BindingSource.DataSource = this.Advisordataset;
-            // 
-            // Advisordataset
-            // 
-            this.Advisordataset.DataSetName = "Advisordataset";
-            this.Advisordataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.reportViewer1.AutoSize = true;
-            this.reportViewer1.BackColor = System.Drawing.Color.CadetBlue;
-            this.reportViewer1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportViewer1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            reportDataSource1.Name = "DataSet1";
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "Evaluationdata";
             reportDataSource1.Value = this.DataTable1BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "MiniProject.AdvisorReport.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "MiniProject.Report2.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
+            // EvaluationDataset
+            // 
+            this.EvaluationDataset.DataSetName = "EvaluationDataset";
+            this.EvaluationDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // DataTable1BindingSource
+            // 
+            this.DataTable1BindingSource.DataMember = "DataTable1";
+            this.DataTable1BindingSource.DataSource = this.EvaluationDataset;
+            // 
             // DataTable1TableAdapter
             // 
             this.DataTable1TableAdapter.ClearBeforeFill = true;
             // 
-            // Report1
+            // REport2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "Report1";
-            this.Text = "Report1";
-            this.Load += new System.EventHandler(this.Report1_Load);
+            this.Name = "REport2";
+            this.Text = "REport2";
+            this.Load += new System.EventHandler(this.REport2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.EvaluationDataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Advisordataset)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -91,7 +84,7 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource DataTable1BindingSource;
-        private Advisordataset Advisordataset;
-        private AdvisordatasetTableAdapters.DataTable1TableAdapter DataTable1TableAdapter;
+        private EvaluationDataset EvaluationDataset;
+        private EvaluationDatasetTableAdapters.DataTable1TableAdapter DataTable1TableAdapter;
     }
 }
