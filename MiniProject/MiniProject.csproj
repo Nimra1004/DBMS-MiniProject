@@ -138,12 +138,21 @@
     <Compile Include="Project.cs" />
     <Compile Include="Projectgrp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rprt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rprt.Designer.cs">
+      <DependentUpon>Rprt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student.cs" />
     <EmbeddedResource Include="Addadviser.resx">
       <DependentUpon>Addadviser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddEvaluation.resx">
       <DependentUpon>AddEvaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStudenttoExistinggrp.resx">
+      <DependentUpon>AddStudenttoExistinggrp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Assignadvisor.resx">
       <DependentUpon>Assignadvisor.cs</DependentUpon>

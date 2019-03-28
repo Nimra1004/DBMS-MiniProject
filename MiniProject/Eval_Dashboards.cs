@@ -14,7 +14,7 @@ namespace MiniProject
     public partial class Eval_Dashboards : Form
     {
         SqlConnection conn = DatabaseConnection.getInstance().getConnection();
-        
+        SqlDataReader dr;
         public Eval_Dashboards()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace MiniProject
             try
             {
                 SqlCommand cm = new SqlCommand("Select Id, Name, TotalMarks, TotalWeightage From Evaluation ", conn);
-                SqlDataReader dr;
+                
                 dr = cm.ExecuteReader();
                 while (dr.Read())
                 {
@@ -48,11 +48,12 @@ namespace MiniProject
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            conn.Open();
+            
             if (dataGridView1.Columns[e.ColumnIndex].Name == "Delete" && (e.RowIndex >= 0))
             {
                 try
                 {
+                    conn.Open();
                     if (MessageBox.Show("Are You Sure You Want to Delete this?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
@@ -68,12 +69,13 @@ namespace MiniProject
                             D.Show();
                         }
                     }
+                    conn.Close();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
-                conn.Close();
+                
             }
             
 
@@ -111,13 +113,13 @@ namespace MiniProject
             }
             else
             {
-                MessageBox.Show("No Data");
+                MessageBox.Show("This is the header row");
             }
         }
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            conn.Open();
+            
             Evaluation C1 = new Evaluation();
             C1.set_Name(nametxt.Text);
             C1.set_Total_Marks(markstxt.Text);
@@ -126,6 +128,7 @@ namespace MiniProject
             {
                 try
                 {
+                    conn.Open();
                     int ID = Convert.ToInt32(textBox1.Text);
                     string cmd2 = String.Format("UPDATE Evaluation SET Name = @Name, TotalMarks=@TotalMarks, TotalWeightage=@TotalWeightage Where Id = @Id ");
                     SqlCommand command2 = new SqlCommand(cmd2, conn);
@@ -143,7 +146,7 @@ namespace MiniProject
                     if (rows2 != 0)
                     {
                         MessageBox.Show("Evaluations Details Updated");
-                        conn.Close();
+                        
                         Edit_Panel.Hide();
                         this.Hide();
                         Eval_Dashboards D = new Eval_Dashboards();
@@ -151,6 +154,7 @@ namespace MiniProject
                         
 
                     }
+                    conn.Close();
 
                 }
                 catch (Exception ex)

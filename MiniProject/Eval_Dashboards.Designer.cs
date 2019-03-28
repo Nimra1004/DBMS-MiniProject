@@ -208,7 +208,7 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(310, 212);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(68, 28);
+            this.button2.Size = new System.Drawing.Size(70, 28);
             this.button2.TabIndex = 17;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = false;
@@ -225,7 +225,7 @@
             this.Cancel.ForeColor = System.Drawing.Color.White;
             this.Cancel.Location = new System.Drawing.Point(154, 212);
             this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(73, 28);
+            this.Cancel.Size = new System.Drawing.Size(79, 28);
             this.Cancel.TabIndex = 16;
             this.Cancel.Text = "  Clear  \r\n";
             this.Cancel.UseVisualStyleBackColor = false;
@@ -242,7 +242,7 @@
             this.Submit.ForeColor = System.Drawing.Color.White;
             this.Submit.Location = new System.Drawing.Point(233, 212);
             this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(71, 28);
+            this.Submit.Size = new System.Drawing.Size(72, 28);
             this.Submit.TabIndex = 15;
             this.Submit.Text = "Update";
             this.Submit.UseVisualStyleBackColor = false;

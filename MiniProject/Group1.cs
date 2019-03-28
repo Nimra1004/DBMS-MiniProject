@@ -21,7 +21,7 @@ namespace MiniProject
         {
 
             InitializeComponent();
-            panel3.Hide();
+            //panel3.Hide();
             //bool j = conn.Open();
             if (conn.State == System.Data.ConnectionState.Open)
             {
@@ -95,12 +95,7 @@ namespace MiniProject
                         SqlCommand f = new SqlCommand(g, conn);
                         int Grp_id = (int)f.ExecuteScalar();
 
-                        string m = String.Format("Select Id From Student where Id=@Id");
-                        SqlCommand command = new SqlCommand(m, conn);
-                        command.Parameters.Add(new SqlParameter("@Id", id));
-                        int s_id = (int)command.ExecuteScalar();
-
-                        string m1 = String.Format("INSERT INTO [GroupStudent](GroupId, StudentId, Status, AssignmentDate) values('{0}', '{1}', '{2}', '{3}' )", Grp_id, s_id, 3, DateTime.Now);
+                        string m1 = String.Format("INSERT INTO [GroupStudent](GroupId, StudentId, Status, AssignmentDate) values('{0}', '{1}', '{2}', '{3}' )", Grp_id, id, 3, DateTime.Now);
                         SqlCommand command1 = new SqlCommand(m1, conn);
                         //command1.Parameters.Add(new SqlParameter("@Id", id));
                         int rows1 = command1.ExecuteNonQuery();
@@ -135,6 +130,11 @@ namespace MiniProject
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 

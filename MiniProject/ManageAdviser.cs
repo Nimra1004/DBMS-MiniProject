@@ -83,13 +83,14 @@ namespace MiniProject
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-                                                                                                                                                                                                                                            conn.Open();
+
             if (dataGridView1.Columns[e.ColumnIndex].Name == "DELETE" && (e.RowIndex >= 0))
             {
                 try
                 {
                     if (MessageBox.Show("Are You Sure You Want to Delete this?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
+                        conn.Open();
                         int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
                         string m = String.Format("DELETE FROM Advisor Where Id = @Id ");
                         SqlCommand command = new SqlCommand(m, conn);
@@ -107,7 +108,9 @@ namespace MiniProject
                             ManageAdviser r = new ManageAdviser();
                             r.Show();
                         }
+                        conn.Close();
                     }
+                    
                 }
                 catch (Exception ex)
                 {

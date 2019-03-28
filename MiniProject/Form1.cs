@@ -200,5 +200,11 @@ namespace MiniProject
             markevaluations g = new markevaluations();
             g.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AddStudenttoExistinggrp h = new AddStudenttoExistinggrp();
+            h.Show();
+        }
     }
 }

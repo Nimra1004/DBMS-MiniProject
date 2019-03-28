@@ -55,12 +55,13 @@ namespace MiniProject
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            conn.Open();
+           
             if (dataGridView1.Columns[e.ColumnIndex].Name == "Delete" && (e.RowIndex >= 0))
             {
 
                 try
                 {
+                    conn.Open();
                     if (MessageBox.Show("Are You Sure You Want to Delete this?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
@@ -76,12 +77,13 @@ namespace MiniProject
                             D.Show();
                         }
                     }
+                    conn.Close();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
-                conn.Close();
+                
             }
 
             else if (dataGridView1.Columns[e.ColumnIndex].Name == "Edit" && (e.RowIndex >= 0))
@@ -90,7 +92,7 @@ namespace MiniProject
                 {
 
                     Edit_Panel.Show();
-                    //conn.Open();
+                    conn.Open();
                     int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
                     SqlCommand cm = new SqlCommand("Select P.Id, P.Title, P.Description from Project P  where P.Id=@Id ", conn);
                     cm.Parameters.Add(new SqlParameter("@Id", id));
@@ -115,7 +117,7 @@ namespace MiniProject
                 }
                 else
                 {
-                    MessageBox.Show("No DATA availiable");
+                   // MessageBox.Show("");
                 }
             }
         }
@@ -133,7 +135,7 @@ namespace MiniProject
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            conn.Open();
+            
             Project C1 = new Project();
             C1.set_Description(DescriptionTxt.Text);
             C1.set_Title(TitleTxt.Text);
@@ -141,6 +143,7 @@ namespace MiniProject
             {
                 try
                 {
+                    conn.Open();
                     int ID = Convert.ToInt32(textBox1.Text);
                     string cmd2 = String.Format("UPDATE Project SET Description = @Description, Title=@Title Where Id = @Id ");
                     SqlCommand command2 = new SqlCommand(cmd2, conn);
@@ -163,12 +166,13 @@ namespace MiniProject
                         ManageProject D = new ManageProject();
                         D.Show();
                     }
+                    conn.Close();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
-                conn.Close();
+                
             }
             else
             {

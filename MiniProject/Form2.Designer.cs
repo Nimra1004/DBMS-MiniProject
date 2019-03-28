@@ -353,9 +353,9 @@
             this.button2.BackColor = System.Drawing.Color.CadetBlue;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(758, 433);
+            this.button2.Location = new System.Drawing.Point(756, 433);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(66, 26);
+            this.button2.Size = new System.Drawing.Size(68, 26);
             this.button2.TabIndex = 9;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = false;
@@ -369,9 +369,9 @@
             this.Submit.BackColor = System.Drawing.Color.CadetBlue;
             this.Submit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Submit.Location = new System.Drawing.Point(687, 433);
+            this.Submit.Location = new System.Drawing.Point(686, 433);
             this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(65, 26);
+            this.Submit.Size = new System.Drawing.Size(66, 26);
             this.Submit.TabIndex = 5;
             this.Submit.Text = "Submit";
             this.Submit.UseVisualStyleBackColor = false;
@@ -385,9 +385,9 @@
             this.Cancel.BackColor = System.Drawing.Color.CadetBlue;
             this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cancel.Location = new System.Drawing.Point(610, 433);
+            this.Cancel.Location = new System.Drawing.Point(604, 433);
             this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(71, 26);
+            this.Cancel.Size = new System.Drawing.Size(77, 26);
             this.Cancel.TabIndex = 7;
             this.Cancel.Text = "  Clear  \r\n";
             this.Cancel.UseVisualStyleBackColor = false;

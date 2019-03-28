@@ -69,41 +69,45 @@ namespace MiniProject
             conn.Close();
         }
 
-        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-    }
-
+        
         
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            panel1.Show();
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "Assign_Advisor" && (e.RowIndex >= 0))
+            {
+
+                panel1.Show();
+            }
 
         }
 
         private void dataGridView3_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            //AdvisorRole.Show();
-            int id = Convert.ToInt32(dataGridView3.Rows[e.RowIndex].Cells["AdvisrId"].Value);
-            int id5 = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["ProjectId"].Value);
-            textBox1.Text = Convert.ToString(id);
-            textBox2.Text = Convert.ToString(id5);
-            AdvisorRole.Show();
-                
-               /** if (comboBox1.Text != "")
-                {
-                    AdvisorRole.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Choose advisor role first");
-                }
-                **/
-                
+            if (dataGridView3.Columns[e.ColumnIndex].Name == "dataGridViewButtonColumn1" && (e.RowIndex >= 0))
+            {
+                //AdvisorRole.Show();
+                int id = Convert.ToInt32(dataGridView3.Rows[e.RowIndex].Cells["AdvisrId"].Value);
+                int id5 = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["ProjectId"].Value);
+                textBox1.Text = Convert.ToString(id);
+                textBox2.Text = Convert.ToString(id5);
+                panel1.Hide();
+                AdvisorRole.Show();
+
+                /** if (comboBox1.Text != "")
+                 {
+                     AdvisorRole.Hide();
+                 }
+                 else
+                 {
+                     MessageBox.Show("Choose advisor role first");
+                 }
+                 **/
+
                 //panel1.Hide();
                 //panel2.Hide();
                 //dataGridView3.Show();
+            }
 
         }
 
@@ -113,35 +117,60 @@ namespace MiniProject
             {
                 //panel3.Show();
                 //comboBox1.Show();
-
-                conn.Open();
-
-                string ab = "ADVISOR_ROLE";
-                //string n = string.Format("Select Id from Lookup where Category=@category");
-                string cmd = String.Format("SELECT Id FROM dbo.Lookup WHERE Category = @Category and Value=@Value");
-                SqlCommand n = new SqlCommand(cmd, conn);
-                n.Parameters.Add(new SqlParameter("@Category", ab));
-                n.Parameters.Add(new SqlParameter("@Value", comboBox1.Text));
-                int id1 = (int)n.ExecuteScalar();
-                //panel3.Hide();
-
-                string m1 = String.Format("INSERT INTO [ProjectAdvisor](ProjectId, AdvisorId, AssignmentDate, AdvisorRole) values('{0}', '{1}', '{2}', '{3}' )", Convert.ToInt16(textBox2.Text), Convert.ToInt16(textBox1.Text), DateTime.Now, id1);
-                SqlCommand command1 = new SqlCommand(m1, conn);
-                //command1.Parameters.Add(new SqlParameter("@Id", id));
-                int rows1 = command1.ExecuteNonQuery();
-                if (rows1 != 0)
+                if (comboBox1.Text != "")
                 {
-                    MessageBox.Show("Assigned");
-                }
-                conn.Close();
-                this.Close();
 
+                    conn.Open();
+
+                    string ab = "ADVISOR_ROLE";
+                    //string n = string.Format("Select Id from Lookup where Category=@category");
+                    string cmd = String.Format("SELECT Id FROM dbo.Lookup WHERE Category = @Category and Value=@Value");
+                    SqlCommand n = new SqlCommand(cmd, conn);
+                    n.Parameters.Add(new SqlParameter("@Category", ab));
+                    n.Parameters.Add(new SqlParameter("@Value", comboBox1.Text));
+                    int id1 = (int)n.ExecuteScalar();
+                    //panel3.Hide();
+
+                    string m1 = String.Format("INSERT INTO [ProjectAdvisor](ProjectId, AdvisorId, AssignmentDate, AdvisorRole) values('{0}', '{1}', '{2}', '{3}' )", Convert.ToInt16(textBox2.Text), Convert.ToInt16(textBox1.Text), DateTime.Now, id1);
+                    SqlCommand command1 = new SqlCommand(m1, conn);
+                    //command1.Parameters.Add(new SqlParameter("@Id", id));
+                    int rows1 = command1.ExecuteNonQuery();
+                    if (rows1 != 0)
+                    {
+                        MessageBox.Show("Assigned");
+                    }
+                    conn.Close();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Choose Advisor Role First");
+                }
+            }
+            else
+            {
+                AdvisorRole.Hide();
             }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Assignadvisor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            panel1.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
